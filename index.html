@@ -39,14 +39,40 @@
                     <i class="fas fa-monument"></i>
                     <span>Delhi Tourism</span>
                 </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#attractions">Attractions</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#attractions" onclick="closeMobileMenu()">Attractions</a></li>
+                    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Side Sheet -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <i class="fas fa-monument"></i>
+                    <span>Delhi Tourism</span>
+                </div>
+                <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-menu-links">
+                <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#attractions" onclick="closeMobileMenu()">Attractions</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>

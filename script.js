@@ -287,6 +287,23 @@ function scrollToAttractions() {
   document.getElementById("attractions").scrollIntoView({ behavior: "smooth" });
 }
 
+// Mobile menu functions
+function openMobileMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburger = document.getElementById("hamburger");
+  mobileMenu.classList.add("active");
+  hamburger.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburger = document.getElementById("hamburger");
+  mobileMenu.classList.remove("active");
+  hamburger.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
 // Initialize
 function init() {
   // Initialize featured carousel
@@ -357,10 +374,24 @@ function init() {
     }
   });
 
+  // Initialize hamburger menu
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  hamburger.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("active")) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
   // Close modal on Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("active")) {
       closeModal();
+    }
+    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+      closeMobileMenu();
     }
   });
 }
