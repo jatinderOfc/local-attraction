@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Delhi - Discover the Heart of India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">New Delhi</h1>
+            <p class="hero-subtitle">Discover the Heart of India</p>
+            <p class="hero-description">Where ancient history meets modern culture in a vibrant tapestry of experiences</p>
+            <button class="hero-cta" onclick="scrollToAttractions()">
+                <span>Explore Attractions</span>
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-monument"></i>
+                    <span>Delhi Tourism</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Attractions Carousel -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Attractions</h2>
+                    <p class="section-subtitle">Must-visit destinations in New Delhi</p>
+                </div>
+                <div class="swiper featured-carousel">
+                    <div class="swiper-wrapper" id="featuredCarousel">
+                        <!-- Cards will be dynamically inserted here -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Attractions with Filters -->
+        <section class="attractions-section" id="attractions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">All Attractions</h2>
+                    <p class="section-subtitle">Explore the rich heritage and culture of New Delhi</p>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        <span>All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Historical Monument">
+                        <i class="fas fa-landmark"></i>
+                        <span>Monuments</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Religious Site">
+                        <i class="fas fa-place-of-worship"></i>
+                        <span>Religious</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Market & Food">
+                        <i class="fas fa-utensils"></i>
+                        <span>Markets</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Park & Nature">
+                        <i class="fas fa-tree"></i>
+                        <span>Parks</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Museum">
+                        <i class="fas fa-university"></i>
+                        <span>Museums</span>
+                    </button>
+                </div>
+
+                <!-- Attractions Grid -->
+                <div class="attractions-grid" id="attractionsGrid">
+                    <!-- Cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About New Delhi</h2>
+                        <p>New Delhi, the capital of India, is a city that seamlessly blends centuries-old history with modern urban development. From magnificent Mughal monuments to bustling markets, from serene temples to vibrant cultural hubs, New Delhi offers an unparalleled experience for every traveler.</p>
+                        <p>Whether you're exploring the UNESCO World Heritage Sites, savoring street food in Old Delhi, or experiencing the contemporary art scene, New Delhi promises memories that will last a lifetime.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-landmark"></i>
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">UNESCO Sites</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-number">20M+</div>
+                            <div class="stat-label">Visitors Annually</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div class="stat-number">365</div>
+                            <div class="stat-label">Days to Explore</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delhi Tourism</h3>
+                    <p>Discover the heart of India through its capital city. Experience history, culture, and modernity all in one place.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#attractions">Attractions</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Delhi Tourism. Made with <i class="fas fa-heart"></i> for exploring India's capital.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </span>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/attractions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
