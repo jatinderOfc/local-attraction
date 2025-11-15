@@ -488,12 +488,25 @@ body {
     background: var(--white);
 }
 
+.attractions-section .container {
+    overflow-x: visible;
+}
+
 .filter-bar {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0.5rem;
+}
+
+.filter-bar::-webkit-scrollbar {
+    display: none;
 }
 
 .filter-btn {
@@ -915,12 +928,21 @@ body {
     }
 
     .filter-bar {
-        gap: 0.5rem;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        padding: 0 1rem 0.5rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .filter-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .about-stats {
